@@ -7,10 +7,6 @@
 #include <stdio.h>
 
 /** Draw single pixel at x,row 
- *
- *  \param col Column to draw to
- *  \param row Row to draw to
- *  \param colorBGR Color of pixel in BGR
  */
 void drawPixel(u_char col, u_char row, u_int colorBGR) 
 {
@@ -38,9 +34,18 @@ void fillRectangle(u_char colMin, u_char rowMin, u_char width, u_char height,
   }
 }
 
-/** Clear screen (fill with color)
- *  
- *  \param colorBGR The color to fill screen
+void fillCircle(u_char center_row,  u_char_ center_col, u_int rad, 
+		   u_int colorBGR)
+{
+  for(int r = center_row - rad; r <= center_row + rad; r++){
+     for(int c = center_col - rad; c <= center_col + rad; c++){
+		 int length = sqrt(pow(rad, 2) - pow((rad-center_row), 2))
+		 if((c > (center_col - length)) &&)
+     }
+  }
+}
+
+/** Fill screen with color
  */
 void clearScreen(u_int colorBGR) 
 {
@@ -73,17 +78,7 @@ void drawChar5x7(u_char rcol, u_char rrow, char c,
   }
 }
 
-/** Draw string at col,row
- *  Type:
- *  FONT_SM - small (5x8,) FONT_MD - medium (8x12,) FONT_LG - large (11x16)
- *  FONT_SM_BKG, FONT_MD_BKG, FONT_LG_BKG - as above, but with background color
- *  Adapted from RobG's EduKit
- *
- *  \param col Column to start drawing string
- *  \param row Row to start drawing string
- *  \param string The string
- *  \param fgColorBGR Foreground color in BGR
- *  \param bgColorBGR Background color in BGR
+/** Draw string with font 5x7
  */
 void drawString5x7(u_char col, u_char row, char *string,
 		u_int fgColorBGR, u_int bgColorBGR)
@@ -128,6 +123,7 @@ void drawFistBump(u_char cc, u_char cr){
     }
   }
 }
+
 void drawTriforce(u_char cc, u_char cr){
   clearScreen(COLOR_DARK_GREEN);
   for(int row = 0; row <= 30; row++){
@@ -141,6 +137,7 @@ void drawTriforce(u_char cc, u_char cr){
     }
   }
 }
+
 void drawPiano(){
   clearScreen(COLOR_PURPLE);
   int swap = 0;
