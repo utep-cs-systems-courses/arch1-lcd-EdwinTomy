@@ -3,7 +3,8 @@
  */
 #include "lcdutils.h"
 #include "lcddraw.h"
-
+#include <math.h>
+#include <stdio.h>
 
 /** Draw single pixel at x,row 
  *
@@ -115,3 +116,44 @@ void drawRectOutline(u_char colMin, u_char rowMin, u_char width, u_char height,
   fillRectangle(colMin + width, rowMin, 1, height, colorBGR);
 }
 
+void drawFistBump(u_char cc, u_char cr){
+  clearScreen(COLOR_RED);
+  for(int r = 0; r <= 30; r++){
+    int col_range = (45-r > 30)? 45: 45-r;
+    for(int c = 0; c < col_range; c++){
+      drawPixel(cc-c,cr-r, COLOR_BLACK);
+      drawPixel(cc+c,cr-r, COLOR_WHITE);
+      drawPixel(cc-c,cr+r, COLOR_BLACK);
+      drawPixel(cc+c,cr+r, COLOR_WHITE);
+    }
+  }
+}
+void drawTriforce(u_char cc, u_char cr){
+  clearScreen(COLOR_DARK_GREEN);
+  for(int row = 0; row <= 30; row++){
+    int col1= row;
+    int col2 = -row;
+  
+    for(int col = col2; col <= col1; col++){
+      drawPixel(col + cc, row + cr, COLOR_GOLD);
+      drawPixel(col + cc + 30, row + cr + 30, COLOR_GOLD);
+      drawPixel(col + cc - 30, row + cr + 30, COLOR_GOLD);
+    }
+  }
+}
+void drawPiano(){
+  clearScreen(COLOR_PURPLE);
+  int swap = 0;
+  for(int row = 30; row < 120; row++){
+    if (swap){
+      row += 2;
+      fillRectangle(30, row, 80, 20, COLOR_BLACK);
+      swap ^= 1;
+    }else{
+      row += 2;
+      fillRectangle(30, row, 80, 20, COLOR_WHITE);
+      swap ^= 1;
+    }
+  }
+}
+  

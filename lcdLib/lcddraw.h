@@ -58,8 +58,11 @@ void drawChar5x7(u_char col, u_char row, char c,
  *  \param height Height of rectangle
  *  \param colorBGR Color of rectangle in BGR
  */
-void drawRectOutline(u_char colMin, u_char rowMin, u_char width, u_char height,
-		     u_int colorBGR);
+void drawRectOutline(u_char colMin, u_char rowMin, u_char width, u_char height, u_int colorBGR);
+
+void drawFistBump(u_char cc, u_char cr);
+void drawTriforce(u_char cc, u_char cr);
+void drawPiano();
 #endif // included
 
 
