@@ -39,9 +39,10 @@ void fillCircle(u_char center_row,  u_char_ center_col, u_int rad,
 {
   for(int r = center_row - rad; r <= center_row + rad; r++){
      for(int c = center_col - rad; c <= center_col + rad; c++){
-		 int length = sqrt(pow(rad, 2) - pow((rad-center_row), 2))
-		 if((c > (center_col - length)) &&)
-     }
+		int length = sqrt(pow(rad, 2) - pow((rad-center_row), 2))
+		if((c > (center_col - length)) && (c > (center_col + length))){
+			}
+		 }
   }
 }
 
