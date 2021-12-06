@@ -23,10 +23,9 @@ void drawChar5x7(u_char rcol, u_char rrow, char c,
 void drawString5x7(u_char col, u_char row, char *string,
 		u_int fgColorBGR, u_int bgColorBGR);
 
-void drawHappySolarSystem(u_int up);\
+void drawHappySolarSystem(u_int up);
 void drawSadSolarSystem(u_int up);
 void sunDeadlyLazer(u_int up);
-
 void welcome();
 
 #endif // included
