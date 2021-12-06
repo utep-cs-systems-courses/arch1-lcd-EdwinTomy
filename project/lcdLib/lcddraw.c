@@ -172,10 +172,8 @@ void sunDeadlyLazer(u_int up){
 } 
 
 void welcome(){
-	
   clearScreen(COLOR_BLACK);
 	drawString5x7(10,60,"Welcome! >:)", COLOR_WHITE, COLOR_BLACK);
-	
 } 
 
 
