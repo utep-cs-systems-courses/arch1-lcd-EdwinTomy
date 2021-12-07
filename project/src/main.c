@@ -124,31 +124,29 @@ void
 __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
   if(sw1_down == 1){ //if sw1 pressed
     buzzer_set_period(0);
-    clearScreen(COLOR_BLACK);
     blink_count++;
     blink_count %= 125;
     switching();
-    drawHappySolarSystem(mov);
+    //drawHappySolarSystem(mov);
     //mov = (mov+1)%2;
 
   } else if(sw2_down == 1){ //if sw2 pressed
     led_off();
-    clearScreen(COLOR_BLACK);
     play_harry_potter();
-    sunDeadlyLazer(mov);
+    //sunDeadlyLazer(mov);
     //mov = (mov+1)%2;
     
   } else if(sw3_down == 1){  
     buzzer_set_period(0);
     dim_lights();
-    drawSadSolarSystem(mov);
+    //drawSadSolarSystem(mov);
     //mov = (mov+1)%2;
     
   } else if(sw4_down == 1){
     buzzer_off();
     led_off();
     buzzer_set_period(0);
-    welcome();
+    //welcome();
     
   } else{
     buzzer_off();
