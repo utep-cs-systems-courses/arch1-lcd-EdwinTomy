@@ -59,7 +59,7 @@ void circleOutline(u_char center_row,  u_char center_col, u_int rad,
 		double pow1 = pow(rad, 2);
 		double pow2 = pow((rad-center_row), 2);
 	  double diff = pow1-pow2;
-		double mag = sqrt(diff);
+		double mag = sqrt(2);
 		int length = round(mag);
 		drawPixel(center_col - length, r, colorBGR);
 		drawPixel(center_col + length, r, colorBGR);
