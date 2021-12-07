@@ -1,7 +1,7 @@
 all:
 	(cd timerLib && make install)
 	(cd lcdLib && make install)
-	(cd src && make all)
+	#(cd src && make all)
 
 doc:
 	rm -rf doxygen_docs
