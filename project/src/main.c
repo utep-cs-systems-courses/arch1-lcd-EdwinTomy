@@ -128,30 +128,30 @@ __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
     blink_count %= 125;
     switching();
     drawHappySolarSystem(mov);
-    //mov ^= 1;
+    mov = (mov+1)%2;
 
   } else if(sw2_down == 1){ //if sw2 pressed
     led_off();
     play_harry_potter();
-    //drawSadSolarSystem(mov);
-    //mov ^= 1;
+    sunDeadlyLazer(mov);
+    mov = (mov+1)%2;
     
   } else if(sw3_down == 1){  
     buzzer_set_period(0);
     dim_lights();
-    //drawSadSolarSystem(mov);
-    //mov ^= 1;
+    drawSadSolarSystem(mov);
+    mov = (mov+1)%2;
     
   } else if(sw4_down == 1){
     buzzer_off();
     led_off();
     buzzer_set_period(0);
-    //welcome();
+    welcome();
     
   } else{
     buzzer_off();
     led_off();
     buzzer_set_period(0);
-    //welcome();
+    welcome();
   } 
 }
