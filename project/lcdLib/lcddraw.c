@@ -42,7 +42,7 @@ void fillCircle(u_char center_row,  u_char center_col, u_int rad,
 		double pow1 = pow(rad, 2);
 		double pow2 = pow((rad - (r - center_row + rad)), 2);
 	  	double diff = pow1-pow2;
-		double mag = sqrt(diff);
+		double mag = sqrt(fabs(diff));
 		int length = round(mag);
 		for(int c = center_col - rad; c <= center_col + rad; c++){
 			if((c > (center_col - length)) && (c < (center_col + length))){
@@ -59,7 +59,7 @@ void circleOutline(u_char center_row,  u_char center_col, u_int rad,
 		double pow1 = pow(rad, 2);
 		double pow2 = pow((rad - (r - center_row + rad)), 2);
 	  	double diff = pow1-pow2;
-		double mag = sqrt(diff);
+		double mag = sqrt(fabs(diff));
 		int length = round(mag);
 		drawPixel(center_col - length, r, colorBGR);
 		drawPixel(center_col + length, r, colorBGR);
@@ -112,8 +112,6 @@ void drawString5x7(u_char col, u_char row, char *string,
 }
 
 void drawHappySolarSystem(u_int up){
-  clearScreen(COLOR_BLACK);
-
 	circleOutline(80, 64, 50, COLOR_WHITE);
 	circleOutline(80, 64, 40, COLOR_WHITE);
 	circleOutline(80, 64, 30, COLOR_WHITE);
@@ -139,8 +137,6 @@ void drawHappySolarSystem(u_int up){
 } 
 
 void drawSadSolarSystem(u_int up){
-  clearScreen(COLOR_DARK_VIOLE);
-
 	circleOutline(80, 64, 50, COLOR_WHITE);
 	circleOutline(80, 64, 40, COLOR_WHITE);
 	circleOutline(80, 64, 30, COLOR_WHITE);
@@ -166,9 +162,7 @@ void drawSadSolarSystem(u_int up){
 } 
 
 void sunDeadlyLazer(u_int up){
-	
-  clearScreen(COLOR_DARK_VIOLE);
-	drawString5x7(10,60,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_DARK_VIOLE);
+	drawString5x7(10,60,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
 	
 	if(up == 1){
 		fillCircle(80, 64, 20, COLOR_RED);
