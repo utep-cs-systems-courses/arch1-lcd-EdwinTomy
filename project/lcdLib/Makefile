@@ -1,15 +1,15 @@
-all: libLcd.a lcd.elf
+all: libLcd.a lcddemo.elf lcd-1.elf
 
 CPU             = msp430g2553
 CFLAGS          = -mmcu=${CPU} -Os -I../h 
 LDFLAGS 	= -L/opt/ti/msp430_gcc/include -L../lib 
 #switch the compiler (for the internal make rules)
-CC              = msp430-elf-gcc -lm
+CC              = msp430-elf-gcc
 AS              = msp430-elf-as
 AR              = msp430-elf-ar
 
 libLcd.a: font-11x16.o font-5x7.o font-8x12.o lcdutils.o lcddraw.o
-	$(AR) crs $@ $^ #-lm
+	$(AR) crs $@ $^
 
 lcddraw.o: lcddraw.c lcddraw.h lcdutils.h
 lcdutils.o: lcdutils.c lcdutils.h
@@ -22,9 +22,14 @@ install: libLcd.a
 clean:
 	rm -f libLcd.a *.o *.elf
 
-lcd.elf: lcd.o libLcd.a
-	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lTimer -lm
+lcddemo.elf: lcddemo.o libLcd.a 
+	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lTimer 
 
+lcd-1.elf: lcd-1.o libLcd.a
+	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lTimer
 
-load-1: lcd.elf
+load: lcddemo.elf
+	msp430loader.sh $^
+
+load-1: lcd-1.elf
 	msp430loader.sh $^
