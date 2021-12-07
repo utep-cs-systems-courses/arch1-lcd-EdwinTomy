@@ -40,7 +40,7 @@ void fillCircle(u_char center_row,  u_char center_col, u_int rad,
 {
   for(int r = center_row - rad; r <= center_row + rad; r++){
 		double pow1 = pow(rad, 2);
-		double pow2 = pow((rad-center_row), 2);
+		double pow2 = pow((rad - (r - center_row + rad)), 2);
 	  	double diff = pow1-pow2;
 		double mag = sqrt(diff);
 		int length = round(mag);
@@ -57,7 +57,7 @@ void circleOutline(u_char center_row,  u_char center_col, u_int rad,
 {
   for(int r = center_row - rad; r <= center_row + rad; r++){
 		double pow1 = pow(rad, 2);
-		double pow2 = pow((rad-center_row), 2);
+		double pow2 = pow((rad - (r - center_row + rad)), 2);
 	  	double diff = pow1-pow2;
 		double mag = sqrt(diff);
 		int length = round(mag);
