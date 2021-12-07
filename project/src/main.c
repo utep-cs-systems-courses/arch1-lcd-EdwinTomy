@@ -7,7 +7,7 @@
 #include "lcddraw.h"
 
 int main(void) {
-  lcd_init();
+  //lcd_init();
   led_init();
   switch_init();
   buzzer_init();
@@ -118,7 +118,7 @@ void play_harry_potter(){
 }
 
 // Interrupt Handler
-u_int mov = 0;
+//u_int mov = 0;
 
 void 
 __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
@@ -127,31 +127,31 @@ __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
     blink_count++;
     blink_count %= 125;
     switching();
-    drawHappySolarSystem(mov);
-    mov ^= 1;
+    //drawHappySolarSystem(mov);
+    //mov ^= 1;
 
   } else if(sw2_down == 1){ //if sw2 pressed
     led_off();
     play_harry_potter();
-    drawSadSolarSystem(mov);
-    mov ^= 1;
+    //drawSadSolarSystem(mov);
+    //mov ^= 1;
     
   } else if(sw3_down == 1){  
     buzzer_set_period(0);
     dim_lights();
-    drawSadSolarSystem(mov);
-    mov ^= 1;
+    //drawSadSolarSystem(mov);
+    //mov ^= 1;
     
   } else if(sw4_down == 1){
     buzzer_off();
     led_off();
     buzzer_set_period(0);
-    welcome();
+    //welcome();
     
   } else{
     buzzer_off();
     led_off();
     buzzer_set_period(0);
-    welcome();
+    //welcome();
   } 
 }
