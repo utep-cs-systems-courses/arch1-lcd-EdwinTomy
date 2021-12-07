@@ -1,6 +1,7 @@
 #ifndef switches_included
 #define switches_included
 
+#define LED BIT6
 #define SWS1 BIT0
 #define SWS2 BIT1
 #define SWS3 BIT2
