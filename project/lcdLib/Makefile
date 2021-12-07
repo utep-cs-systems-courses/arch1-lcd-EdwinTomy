@@ -9,7 +9,7 @@ AS              = msp430-elf-as
 AR              = msp430-elf-ar
 
 libLcd.a: font-11x16.o font-5x7.o font-8x12.o lcdutils.o lcddraw.o
-	$(AR) crs $@ $^
+	$(AR) crs $@ $^ -lm
 
 lcddraw.o: lcddraw.c lcddraw.h lcdutils.h
 lcdutils.o: lcdutils.c lcdutils.h
