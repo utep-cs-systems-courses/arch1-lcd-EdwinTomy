@@ -7,12 +7,12 @@
 #include "lcddraw.h"
 
 int main(void) {
-  //lcd_init();
   led_init();
   switch_init();
   buzzer_init();
   configureClocks();		/* setup master oscillator, CPU & peripheral clocks */
   enableWDTInterrupts();	/* enable periodic interrupt */
+  lcd_init();
   
   or_sr(0x18);		/* CPU off, GIE on */
 }
