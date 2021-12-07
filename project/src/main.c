@@ -7,13 +7,14 @@
 #include "lcddraw.h"
 
 int main(void) {
+  lcd_init();
   led_init();
   switch_init();
   buzzer_init();
   configureClocks();		/* setup master oscillator, CPU & peripheral clocks */
   enableWDTInterrupts();	/* enable periodic interrupt */
   
-  or_sr(0x18);		/* CPU off, GIE on */
+  or_sr(0x8);		/* CPU off, GIE on */
 }
 int blink_count = 0;
 
@@ -138,7 +139,7 @@ __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
   } else if(sw3_down == 1){  
     buzzer_set_period(0);
     dim_lights();
-    sunDeadlyLazer(mov);
+    drawSadSolarSystem(mov);
     mov ^= 1;
     
   } else if(sw4_down == 1){
