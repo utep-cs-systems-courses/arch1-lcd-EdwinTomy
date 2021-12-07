@@ -118,7 +118,7 @@ void play_harry_potter(){
 }
 
 // Interrupt Handler
-//u_int mov = 0;
+u_int mov = 0;
 
 void 
 __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
@@ -127,7 +127,7 @@ __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
     blink_count++;
     blink_count %= 125;
     switching();
-    //drawHappySolarSystem(mov);
+    drawHappySolarSystem(mov);
     //mov ^= 1;
 
   } else if(sw2_down == 1){ //if sw2 pressed
