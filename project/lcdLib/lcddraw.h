@@ -9,10 +9,10 @@ void drawPixel(u_char col, u_char row, u_int colorBGR);
 void fillRectangle(u_char colMin, u_char rowMin, u_char width, u_char height, 
 		   u_int colorBGR);
 
-void fillCircle(u_char center_row,  u_char_ center_col, u_int rad, 
+void fillCircle(u_char center_row,  u_char center_col, u_int rad, 
 		   u_int colorBGR);
 
-void circleOutline(u_char center_row,  u_char_ center_col, u_int rad, 
+void circleOutline(u_char center_row,  u_char center_col, u_int rad, 
 		   u_int colorBGR);
 
 void clearScreen(u_int colorBGR);
