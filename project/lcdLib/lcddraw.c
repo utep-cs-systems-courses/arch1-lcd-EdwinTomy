@@ -45,7 +45,7 @@ void fillCircle(u_char center_row,  u_char center_col, u_int rad,
 		double mag = sqrt(diff);
 		int length = round(mag);
 		for(int c = center_col - rad; c <= center_col + rad; c++){
-			if((c > (center_col - length)) && (c > (center_col + length))){
+			if((c > (center_col - length)) && (c < (center_col + length))){
 				drawPixel(c, r, colorBGR);
 			}
 		}
