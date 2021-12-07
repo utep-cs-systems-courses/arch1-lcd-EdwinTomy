@@ -14,7 +14,7 @@ int main(void) {
   configureClocks();		/* setup master oscillator, CPU & peripheral clocks */
   enableWDTInterrupts();	/* enable periodic interrupt */
   
-  or_sr(0x8);		/* CPU off, GIE on */
+  or_sr(0x18);		/* CPU off, GIE on */
 }
 int blink_count = 0;
 
