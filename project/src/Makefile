@@ -11,7 +11,7 @@ all: main.elf
 
 #additional rules for files
 main.elf: ${COMMON_OBJECTS} buzzer.o led.o switches.o main.o switching_s.o ../lib/libTimer.a
-	${CC} ${CFLAGS} -o $@ $^
+	${CC} ${CFLAGS} -o $@ $^ -lTimer -lLcd
 
 load: main.elf
 	msp430loader.sh  $^
