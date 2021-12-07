@@ -35,7 +35,7 @@ void fillRectangle(u_char colMin, u_char rowMin, u_char width, u_char height,
   }
 }
 
-void fillCircle(u_char center_row,  u_char_ center_col, u_int rad, 
+void fillCircle(u_char center_row,  u_char center_col, u_int rad, 
 		   u_int colorBGR)
 {
   for(int r = center_row - rad; r <= center_row + rad; r++){
@@ -48,7 +48,7 @@ void fillCircle(u_char center_row,  u_char_ center_col, u_int rad,
   }
 }
 
-void circleOutline(u_char center_row,  u_char_ center_col, u_int rad, 
+void circleOutline(u_char center_row,  u_char center_col, u_int rad, 
 		   u_int colorBGR)
 {
   for(int r = center_row - rad; r <= center_row + rad; r++){
