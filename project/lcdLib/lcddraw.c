@@ -39,7 +39,7 @@ void fillCircle(u_char center_row,  u_char center_col, u_int rad,
 		   u_int colorBGR)
 {
   for(int r = center_row - rad; r <= center_row + rad; r++){
-		int length = sqrt(pow(rad, 2) - pow((rad-center_row), 2));
+		int length = round(sqrt(pow(rad, 2) - pow((rad-center_row), 2)));
 		for(int c = center_col - rad; c <= center_col + rad; c++){
 			if((c > (center_col - length)) && (c > (center_col + length))){
 				drawPixel(c, r, colorBGR);
@@ -52,7 +52,7 @@ void circleOutline(u_char center_row,  u_char center_col, u_int rad,
 		   u_int colorBGR)
 {
   for(int r = center_row - rad; r <= center_row + rad; r++){
-		int length = sqrt(pow(rad, 2) - pow((rad-center_row), 2));
+		int length = round(sqrt(pow(rad, 2) - pow((rad-center_row), 2)));
 		drawPixel(center_col - length, r, colorBGR);
 		drawPixel(center_col + length, r, colorBGR);
   }
