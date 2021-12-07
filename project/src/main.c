@@ -124,6 +124,7 @@ void
 __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
   if(sw1_down == 1){ //if sw1 pressed
     buzzer_set_period(0);
+    clearScreen(COLOR_BLACK);
     blink_count++;
     blink_count %= 125;
     switching();
@@ -132,6 +133,7 @@ __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
 
   } else if(sw2_down == 1){ //if sw2 pressed
     led_off();
+    clearScreen(COLOR_BLACK);
     play_harry_potter();
     sunDeadlyLazer(mov);
     //mov = (mov+1)%2;
@@ -152,6 +154,6 @@ __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
     buzzer_off();
     led_off();
     buzzer_set_period(0);
-    welcome();
+    //clearScreen(COLOR_BLACK);
   } 
 }
