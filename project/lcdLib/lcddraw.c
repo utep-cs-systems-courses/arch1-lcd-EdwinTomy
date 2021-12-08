@@ -112,28 +112,59 @@ void drawString5x7(u_char col, u_char row, char *string,
 }
 
 void drawHappySolarSystem(u_int up){
+	clearScreen(COLOR_BLACK);
+	
 	circleOutline(80, 64, 50, COLOR_WHITE);
 	circleOutline(80, 64, 40, COLOR_WHITE);
 	circleOutline(80, 64, 30, COLOR_WHITE);
 	
-	if(up == 1){
-		fillCircle(80, 64, 15, COLOR_YELLOW);
-		
-		fillCircle(80, 14, 4, COLOR_CYAN);
-		circleOutline(80, 14, 6, COLOR_WHITE);
-		
-		fillCircle(52, 92, 5, COLOR_AQUAMARINE);
-		fillCircle(110, 64, 4, COLOR_TURQUOISE);
-		
-	} else {
-		fillCircle(80, 64, 15, COLOR_GOLD);
-		
-		fillCircle(40, 34, 4, COLOR_CYAN);
-		circleOutline(40, 34, 6, COLOR_WHITE);
-		
-		fillCircle(80, 104, 5, COLOR_AQUAMARINE);
-		fillCircle(89, 53, 4, COLOR_TURQUOISE);
-	}
+	
+	fillCircle(80, 64, 15, COLOR_YELLOW);
+
+	fillCircle(80, 14, 4, COLOR_CYAN);
+	circleOutline(80, 14, 6, COLOR_WHITE);
+
+	fillCircle(52, 92, 5, COLOR_AQUAMARINE);
+	fillCircle(110, 64, 4, COLOR_TURQUOISE);
+
+	clearScreen(COLOR_BLACK);
+	
+	circleOutline(80, 64, 50, COLOR_WHITE);
+	circleOutline(80, 64, 40, COLOR_WHITE);
+	circleOutline(80, 64, 30, COLOR_WHITE);
+
+	fillCircle(80, 64, 15, COLOR_GOLD);
+
+	fillCircle(40, 34, 4, COLOR_CYAN);
+	circleOutline(40, 34, 6, COLOR_WHITE);
+
+	fillCircle(80, 104, 5, COLOR_AQUAMARINE);
+	fillCircle(89, 53, 4, COLOR_TURQUOISE);
+	
+	drawString5x7(10,60,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	clearScreen(COLOR_BLACK);
+	
+	circleOutline(80, 64, 50, COLOR_WHITE);
+	circleOutline(80, 64, 40, COLOR_WHITE);
+	circleOutline(80, 64, 30, COLOR_WHITE);
+	
+	fillCircle(80, 64, 20, COLOR_RED);
+
+	fillCircle(80, 14, 4, COLOR_BROWN);
+	circleOutline(80, 14, 6, COLOR_WHITE);
+
+	fillCircle(52, 92, 5, COLOR_PINK);
+	fillCircle(110, 64, 4, COLOR_FIREBRICK);
+
+
+	fillCircle(80, 64, 25, COLOR_ORANGE_RED);
+
+	fillCircle(40, 34, 4, COLOR_BROWN);
+	circleOutline(40, 34, 6, COLOR_WHITE);
+
+	fillCircle(80, 104, 5, COLOR_PINK);
+	fillCircle(89, 53, 4, COLOR_FIREBRICK);
+	
 } 
 
 void drawSadSolarSystem(u_int up){
@@ -141,24 +172,25 @@ void drawSadSolarSystem(u_int up){
 	circleOutline(80, 64, 40, COLOR_WHITE);
 	circleOutline(80, 64, 30, COLOR_WHITE);
 	
-	if(up == 1){
-		fillCircle(80, 64, 20, COLOR_RED);
-		
-		fillCircle(80, 14, 4, COLOR_BROWN);
-		circleOutline(80, 14, 6, COLOR_WHITE);
-		
-		fillCircle(52, 92, 5, COLOR_PINK);
-		fillCircle(110, 64, 4, COLOR_FIREBRICK);
-		
-	} else {
-		fillCircle(80, 64, 25, COLOR_ORANGE_RED);
-		
-		fillCircle(40, 34, 4, COLOR_BROWN);
-		circleOutline(40, 34, 6, COLOR_WHITE);
-		
-		fillCircle(80, 104, 5, COLOR_PINK);
-		fillCircle(89, 53, 4, COLOR_FIREBRICK);
-	}
+	fillCircle(80, 64, 20, COLOR_RED);
+
+	fillCircle(80, 14, 4, COLOR_BROWN);
+	circleOutline(80, 14, 6, COLOR_WHITE);
+
+	fillCircle(52, 92, 5, COLOR_PINK);
+	fillCircle(110, 64, 4, COLOR_FIREBRICK);
+
+
+	fillCircle(80, 64, 25, COLOR_ORANGE_RED);
+
+	fillCircle(40, 34, 4, COLOR_BROWN);
+	circleOutline(40, 34, 6, COLOR_WHITE);
+
+	fillCircle(80, 104, 5, COLOR_PINK);
+	fillCircle(89, 53, 4, COLOR_FIREBRICK);
+	
+	drawString5x7(10,60,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	
 } 
 
 void sunDeadlyLazer(u_int up){
