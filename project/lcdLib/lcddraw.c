@@ -134,25 +134,33 @@ void drawHappySolarSystem(u_int up){
 	circleOutline(80, 64, 30, COLOR_WHITE);
 	fillCircle(89, 53, 4, COLOR_TURQUOISE);
 	
-	drawString5x7(10,30,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
-	drawString5x7(10,40,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
-	drawString5x7(10,50,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
-	drawString5x7(10,60,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
-	drawString5x7(10,70,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
-	drawString5x7(10,80,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,30,"ThE sUN iS a deAdlY", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,40,"LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,50,"ThE sUN iS a deAdlY", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,60,"LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,70,"ThE sUN iS a deAdlY", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,80,"LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,90,"ThE sUN iS a deAdlY", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,100,"LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,110,"ThE sUN iS a deAdlY", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,120,"LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,130,"ThE sUN iS a deAdlY", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,140,"LasEr :(", COLOR_WHITE, COLOR_BLACK);
 	
-	clearScreen(COLOR_BLACK);
-	
-	fillCircle(80, 64, 20, COLOR_RED);
+	fillCircle(80, 64, 20, COLOR_GOLD);
 	fillCircle(80, 64, 25, COLOR_ORANGE_RED);
-	fillCircle(80, 64, 30, COLOR_RED);
+	fillCircle(80, 64, 30, COLOR_GOLD);
 	fillCircle(80, 64, 35, COLOR_ORANGE_RED);
-	fillCircle(80, 64, 40, COLOR_RED);
+	fillCircle(80, 64, 40, COLOR_GOLD);
 	fillCircle(80, 64, 45, COLOR_ORANGE_RED);
-	fillCircle(80, 64, 50, COLOR_RED);
+	fillCircle(80, 64, 50, COLOR_GOLD);
 	fillCircle(80, 64, 55, COLOR_ORANGE_RED);
-	fillCircle(80, 64, 60, COLOR_RED);
+	fillCircle(80, 64, 60, COLOR_GOLD);
 	fillCircle(80, 64, 65, COLOR_ORANGE_RED);
+	fillCircle(80, 64, 70, COLOR_GOLD);
+	fillCircle(80, 64, 75, COLOR_ORANGE_RED);
+	fillCircle(80, 64, 80, COLOR_GOLD);
+	fillCircle(80, 64, 85, COLOR_ORANGE_RED);
 	
 } 
 
