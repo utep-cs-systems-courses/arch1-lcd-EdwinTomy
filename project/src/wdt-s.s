@@ -21,17 +21,17 @@ wdt_c_handler:
 
 mod1:
 	mov &mode, r12
-	call #act1
+	call #drawHappySolarSystem
 	jmp end
 	
 mod2:
 	mov &mode, r12
-	call #act2
+	call #sunDeadlyLazer
 	jmp end
   
 mod3:
 	mov &mode, r12
-	call #act3
+	call #drawSadSolarSystem
 	jmp end
 	
 default:
