@@ -127,43 +127,32 @@ void drawHappySolarSystem(u_int up){
 	fillCircle(52, 92, 5, COLOR_AQUAMARINE);
 	fillCircle(110, 64, 4, COLOR_TURQUOISE);
 
-	clearScreen(COLOR_BLACK);
 	
-	circleOutline(80, 64, 50, COLOR_WHITE);
-	circleOutline(80, 64, 40, COLOR_WHITE);
-	circleOutline(80, 64, 30, COLOR_WHITE);
 
 	fillCircle(80, 64, 15, COLOR_GOLD);
-
-	fillCircle(40, 34, 4, COLOR_CYAN);
-	circleOutline(40, 34, 6, COLOR_WHITE);
-
-	fillCircle(80, 104, 5, COLOR_AQUAMARINE);
+	fillCircle(110, 64, 4, COLOR_BLACK);
+	circleOutline(80, 64, 30, COLOR_WHITE);
 	fillCircle(89, 53, 4, COLOR_TURQUOISE);
 	
+	drawString5x7(10,30,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,40,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,50,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
 	drawString5x7(10,60,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,70,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	drawString5x7(10,80,"ThE sUN iS a deAdlY LasEr :(", COLOR_WHITE, COLOR_BLACK);
+	
 	clearScreen(COLOR_BLACK);
 	
-	circleOutline(80, 64, 50, COLOR_WHITE);
-	circleOutline(80, 64, 40, COLOR_WHITE);
-	circleOutline(80, 64, 30, COLOR_WHITE);
-	
 	fillCircle(80, 64, 20, COLOR_RED);
-
-	fillCircle(80, 14, 4, COLOR_BROWN);
-	circleOutline(80, 14, 6, COLOR_WHITE);
-
-	fillCircle(52, 92, 5, COLOR_PINK);
-	fillCircle(110, 64, 4, COLOR_FIREBRICK);
-
-
 	fillCircle(80, 64, 25, COLOR_ORANGE_RED);
-
-	fillCircle(40, 34, 4, COLOR_BROWN);
-	circleOutline(40, 34, 6, COLOR_WHITE);
-
-	fillCircle(80, 104, 5, COLOR_PINK);
-	fillCircle(89, 53, 4, COLOR_FIREBRICK);
+	fillCircle(80, 64, 30, COLOR_RED);
+	fillCircle(80, 64, 35, COLOR_ORANGE_RED);
+	fillCircle(80, 64, 40, COLOR_RED);
+	fillCircle(80, 64, 45, COLOR_ORANGE_RED);
+	fillCircle(80, 64, 50, COLOR_RED);
+	fillCircle(80, 64, 55, COLOR_ORANGE_RED);
+	fillCircle(80, 64, 60, COLOR_RED);
+	fillCircle(80, 64, 65, COLOR_ORANGE_RED);
 	
 } 
 
