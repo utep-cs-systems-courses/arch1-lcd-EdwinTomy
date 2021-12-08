@@ -132,6 +132,21 @@ void drawHappySolarSystem(u_int up){
 	fillCircle(80, 64, 15, COLOR_GOLD);
 	fillCircle(110, 64, 4, COLOR_BLACK);
 	circleOutline(80, 64, 30, COLOR_WHITE);
+	fillCircle(105, 61, 4, COLOR_TURQUOISE);
+	
+	fillCircle(80, 64, 15, COLOR_GOLD);
+	fillCircle(105, 61, 4, COLOR_BLACK);
+	circleOutline(80, 64, 30, COLOR_WHITE);
+	fillCircle(100, 58, 4, COLOR_TURQUOISE);
+	
+	fillCircle(80, 64, 15, COLOR_GOLD);
+	fillCircle(100, 58, 4, COLOR_BLACK);
+	circleOutline(80, 64, 30, COLOR_WHITE);
+	fillCircle(95, 55, 4, COLOR_TURQUOISE);
+	
+	fillCircle(80, 64, 15, COLOR_GOLD);
+	fillCircle(95, 55, 4, COLOR_BLACK);
+	circleOutline(80, 64, 30, COLOR_WHITE);
 	fillCircle(89, 53, 4, COLOR_TURQUOISE);
 	
 	drawString5x7(10,30,"ThE sUN iS a deAdlY", COLOR_WHITE, COLOR_BLACK);
