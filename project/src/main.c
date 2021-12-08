@@ -127,7 +127,7 @@ __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
     blink_count++;
     blink_count %= 125;
     switching();
-    drawHappySolarSystem(mov);
+    //drawHappySolarSystem(mov);
     //mov = (mov+1)%2;
 
   } else if(sw2_down == 1){ //if sw2 pressed
@@ -139,6 +139,7 @@ __interrupt_vec(WDT_VECTOR) WDT(){      /* 250 interrupts/sec */
   } else if(sw3_down == 1){  
     buzzer_set_period(0);
     dim_lights();
+    drawHappySolarSystem(mov);
     //drawSadSolarSystem(mov);
     //mov = (mov+1)%2;
     
