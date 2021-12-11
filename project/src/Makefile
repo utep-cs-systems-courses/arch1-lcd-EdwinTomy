@@ -12,7 +12,7 @@ AS              = msp430-elf-as
 all: main.elf
 
 #additional rules for files
-main.elf: ${COMMON_OBJECTS} buzzer.o led.o switches.o main.o switching_s.o ../lib/libTimer.a
+main.elf: ${COMMON_OBJECTS} buzzer.o led.o switches.o main.o switching_s.o wdt_handler.o ../lib/libTimer.a
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^ -lTimer -lLcd -lm
 
 load: main.elf
@@ -21,6 +21,7 @@ load: main.elf
 clean: $^
 	rm -f *.o *.elf *.c~ *.h~ *.c#
 
+wdt.elf: wdt-c.o 
 buzzer.o: buzzer.h 
 led.o: led.h 
 switches.o: switches.h led.h 
